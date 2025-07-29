@@ -1,0 +1,35 @@
+Записать в новый файл дату.
+Дописать в этот файл информацию о занятом пространстве на корневом разделе файловой системы (/)
+Дописать в файл три последних команд из истории команд.
+Дописать в файл информацию из  (/etc/passwd), но отфильтруйте информацию  так, чтобы в файл ушли только строки 
+со словом cron
+Дописать в файл количество строк со словом root из  (/etc/group)
+В текстовом редакторе добавьте второй строкой  фразу “Modified with text editor”
+
+  0 tree /tmp
+
+   1 date /tmp/new_file
+
+   2 date >> /tmp/new_file
+
+   3 date +%D >> /tmp/new_file 
+
+   4 df -h / >> /tmp/new_file 
+
+   5 history | tail -3 >> /tmp/new_file 
+
+   6 grep "cron" /etc/passwd
+
+   7 grep "cron" /etc/passwd >> /tmp/new_file 
+
+   8 grep "root" /etc/group | wc -l >> /tmp/new_file 
+
+   9 cat /tmp/new_file 
+
+  10 vi /tmp/new_file 
+
+  11 clear
+
+  11 cat /tmp/new_file 
+
+  13 history >> dz4.txt

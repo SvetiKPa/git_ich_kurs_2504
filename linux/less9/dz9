@@ -1,0 +1,48 @@
+Создайте файл myfirstbashscript.sh где угодно.
+Сделайте его исполняемым.
+Заведите новую переменную USER и присвойте ей ваше имя в качестве значения
+Добавьте в скрипт все необходимое, чтобы он :
+Написал дату
+Поприветствовал Вас по имени ( hello $USER!)
+Написал, из какой директории он работает
+echo "Operating from directory: $(pwd)"
+
+Vladimir S. 9:13
+echo "Мой скрипт работает из директории: $/map1/"
+
+Добавил количество процессов с именем bioset одним числом (не учитывая процесс grep)
+ ps -ef | grep -v "grep" | grep "bioset" | wc -l
+Вывел права на файл /etc/passwd в формате (-rw-r--r--) - и только эту часть (потребуется awk)
+
+Экспортируйте и пришлите результирующий файл, желательно в формате txt
+
+#!/bin/bash
+set -e
+date +%D
+echo "Hello, $USER"
+pwd
+ps -ef | grep -v "grep" |grep "bioset" | wc -l
+ls -l /etc/passwd | awk '{print $1}'
+
+
+   1 mkdir -p /tmp/2504_svetl
+   2 echo "#!/bin/bash" >> myfirstbashscript.sh
+   3 chmod +774 /tmp/2504_svetl/myfirstbashscript.sh
+   4 echo "#!/bin/bash" >> /tmp/2504_svetl/myfirstbashscript.sh
+   5 chmod 774 /tmp/2504_svetl/myfirstbashscript.sh
+   6 export USER=Svetlana_P
+   7 pwd
+   8 vi 2504_svetl/myfirstbashscript.sh
+   9 /tmp/2504_svetl/myfirstbashscript.sh
+  10 ls -l /etc/passwd | awk '{print $1}'
+  11 vi /tmp/2504_svetl/myfirstbashscript.sh
+  12 /tmp/2504_svetl/myfirstbashscript.sh
+  13 cd /tmp/2504_svetl/
+  14 ./
+  15 /tmp/2504_svetl/myfirstbashscript.sh
+  16 vi myfirstbashscript.sh
+  17 /tmp/2504_svetl/myfirstbashscript.sh
+  18 vi myfirstbashscript.sh
+  19 /tmp/2504_svetl/myfirstbashscript.sh
+  20 history >> history.txt
+  21 export_file history.txt

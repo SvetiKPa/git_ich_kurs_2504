@@ -1,0 +1,4 @@
+for NAMES in $(find . -type f -name "*.sh")
+do
+chmod 744 "$NAMES"
+done

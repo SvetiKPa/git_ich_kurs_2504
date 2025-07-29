@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+date +%d-%m-%Y
+echo "Hello, $USER"
+echo "Start from $(pwd)"
+ps -ef | grep -v "grep" | grep "bioset" | wc -l
+echo "file /etc/passwd " | ls -l /etc/passwd | awk '{print $1}'

@@ -1,0 +1,66 @@
+Создайте файл file.txt при помощи vi или nano в папке /tmp
+Добавьте в него 3 первые строчки из вывода команды df -h
+Дайте права для группы пользователей на запись и исполнение.
+Уберите права для всех остальных.
+Создайте файл myfirstbashscript.sh где угодно.
+Сделайте его исполняемым.
+Заведите новую переменную USER и присвойте ей ваше имя в качестве значения.
+Добавьте в него необходимую команду или вызов переменной, чтобы скрипт написал, из какой директории он работает
+ (откуда он был запущен)
+Допишите в /tmp/file.txt содержимое myfirstbashscript.sh
+После всех операций, допишите в /tmp/file.txt историю команд.
+Пришлите /tmp/file.txt при помощи export_file /tmp/file.txt
+
+1000  vi /tmp/sv_p/newtextfile.txt
+
+ 1001  df -h | head -3 >> /tmp/sv_p/newtextfile.txt
+
+ 1002  cat /tmp/sv_p/newtextfile.txt
+
+ 1003  chmod g+wx /tmp/sv_p/newtextfile.txt
+
+ 1004  ls -l
+
+ 1005  cd /tmp/sv_p/
+
+ 1006  ls -l
+
+ 1007  chmod o-wx newtextfile.txt
+
+ 1008  ls -l
+
+ 1009  touch myfirstbashscript.sh
+
+ 1010  cat myfirstbashscript.sh
+
+ 1011  ls -l
+
+ 1012  cat myfirstbashscript.sh
+
+ 1013  vi myfirstbashscript.sh
+
+ 1014  cat myfirstbashscript.sh
+
+ 1015  chmod +x myfirstbashscript.sh
+
+ 1016  ls -l
+
+ 1017  export $USER=Svetlana_p
+
+ 1018  cat myfirstbashscript.sh >> /tmp/sv_p/newtextfile.txt
+
+ 1019* chmod
+
+ 1020  history
+
+ 1021  history tail -20 >> /tmp/sv_p/newtextfile.txt
+
+ 1022  vi newtextfile.txt
+
+ 1023  clear
+
+ 1024  history | tail -20 >> /tmp/sv_p/newtextfile.txt
+
+ 1025  vi newtextfile.txt
+
+ 1026  history | tail -20
